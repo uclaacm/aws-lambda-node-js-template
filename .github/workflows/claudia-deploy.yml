@@ -21,8 +21,8 @@ jobs:
       - name: Commit files
         id: commit
         run: |
-          git config --local user.email ${{ secrets.EMAIL }}
-          git config --local user.name ${{ secrets.USERNAME }}
+          git config --local user.email ${{ secrets.AWS_SERVICE_USERNAME }}
+          git config --local user.name ${{ secrets.AWS_SERVICE_EMAIL }}
           git add ./claudia.json
           git commit --allow-empty -m "Add claudia.json"
           git push
