@@ -1,7 +1,7 @@
 {
   "lambda": {
     "role": "claudia-test-executor",
-    "name": "claudia-test",
+    "name": "aws-lambda-node-js-template",
     "region": "us-west-1",
     "sharedRole": true
   }
