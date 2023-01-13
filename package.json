@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/uclaacm/claudia-update/issues"
   },
-  "homepage": "https://github.com/uclaacm/claudia-update#readme"
+  "homepage": "https://github.com/uclaacm/claudia-update#readme",
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
 }
