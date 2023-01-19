@@ -25,9 +25,3 @@ jobs:
       - name: Check if function exists, if so update
         run: |
           aws lambda get-function --function-name ${{ github.event.repository.name }} > /dev/null 2>&1
-          if [ 0 -eq $? ]; then
-            echo "Lambda function exists"
-          else
-            echo "Lambda function does not exist"
-            # claudia update
-          fi
