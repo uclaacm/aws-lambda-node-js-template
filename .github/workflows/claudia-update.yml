@@ -24,4 +24,5 @@ jobs:
           git pull
       - name: Check if function exists, if so update
         run: |
+          echo ${{ github.event.repository.name }}
           aws lambda get-function --function-name claudia-test
