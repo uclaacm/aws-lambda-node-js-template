@@ -21,8 +21,10 @@ jobs:
           git config --local user.email ${{ secrets.AWS_SERVICE_EMAIL }}
           git config --local user.name ${{ secrets.AWS_SERVICE_USERNAME }}
           git pull
-      - name: Check if function exists, if so update
+      - name: If claudia.json doesn't exist or lambda function not deployed, exit with code 1
         run: |
-          if test -f "./claudia.json"; then
+          if test -f "./claudia.json" && aws lambda get-function --function-name ${{ github.event.repository.name }}; then
             claudia update
+          else
+            exit 1
           fi

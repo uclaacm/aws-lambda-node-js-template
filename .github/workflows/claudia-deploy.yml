@@ -1,9 +1,6 @@
 name: claudia-deploy
 run-name: ${{ github.actor }} is deploying a Lambda function via Claudia!
-on:
-  create:
-    branches:
-      - "main"
+on: workflow_dispatch
 jobs:
   claudia-deployment:
     runs-on: ubuntu-latest
